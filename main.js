@@ -23,7 +23,7 @@ const addStudent = ( name, age, roll) => {
 
 //create a functio that will create students on the DOM
 
-const createStudentElement = () => {
+const createStudentElement = ({ name, age, roll}) => {
     //create student data
     const studentDiv = document.createElement('div');
     const studentName = document.createElement('h2');
@@ -32,10 +32,33 @@ const createStudentElement = () => {
 
     //add text to the created element
     studentName.innerText = `Student Name: ${name}`;
-    studentAge.innerText = `Student Name: ${age}`;    
-    studentRoll.innerText = `Student Name: ${roll}`;
+    studentAge.innerText = `Student Age: ${age}`;    
+    studentRoll.innerText = `Roll Number: ${roll}`;
 
     // append the create data to student div
     studentDiv.append(studentName, studentAge, studentRoll);
     studentContainer.appendChild(studentDiv);
 }
+
+students.forEach(createStudentElement);
+
+// select the form for submission
+
+studentForm.addEventListener('submit', (e) => {
+    // to prevent the default submissio of form element
+    e.preventDefault()
+
+    // 
+    const newStudent = addStudent(
+        nameInput.value,
+        ageInput.value, 
+        rollInput.value     
+    )
+    // pass the input value to the addStudent function to push the values into the student array
+    // and to return the value into the createStudentElement
+    createStudentElement(newStudent);
+
+    nameInput.value = '';
+    ageInput.value = '';
+    rollInput.value = '';
+});
