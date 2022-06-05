@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    width: 100%;
+    border: 1px solid blue;
+}
+
+form{
+    width: 80%;
+    margin: 30px auto 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row: auto;
+    grid-template-areas: 
+        'name name'
+        'age roll'
+        'button button'
+    ;
+    gap: 5px;
+}
+
+input, button{
+    padding: 10px 13px;
+    border-radius: 10px;
+    border: 2px solid #6993E8;
+    outline: none;
+}
+
+button{
+    background: #6993E8;
+    grid-area: button;
+    cursor: pointer;
+}
+
+.students{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 10px auto;
+    /* padding: 30px; */
+    background-color: gray;
+    border: 2px solid black;
+    border-radius: 10px;
+    outline: none;
+    text-align: center;
+}
+
+#name{
+    grid-area: name;
+}
+
+#age{
+    grid-area: age;
+}
+
+#roll{
+    grid-area: roll;
+}
+
+.students div{
+    margin: 20px 0;
+}
+
+p{
+    margin-top: 10px;
+}
