@@ -51,7 +51,7 @@ students.forEach(createStudentElement);
 // select the form for submission
 
 studentForm.addEventListener('submit', (e) => {
-    // to prevent the default submissio of form element
+    // to prevent the default submission of form element
     e.preventDefault()
 
     // 
