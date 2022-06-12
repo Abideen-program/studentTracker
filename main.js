@@ -40,7 +40,7 @@ const createStudentElement = ({ name, age, roll}) => {
     // append the create data to student div
     studentDiv.append(studentName, studentAge, studentRoll);
     studentContainer.appendChild(studentDiv);
-
+    //to check if there is something in the students array or not
     studentContainer.style.display = students.length === 0 ? 'none' : 'flex'
 }
 
