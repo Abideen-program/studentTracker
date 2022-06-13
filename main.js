@@ -33,9 +33,9 @@ const createStudentElement = ({ name, age, roll}) => {
     const studentRoll = document.createElement('p');
 
     //add text to the created element
-    studentName.innerText = `Student Name: ${name}`;
-    studentAge.innerText = `Student Age: ${age}`;    
-    studentRoll.innerText = `Roll Number: ${roll}`;
+    studentName.innerText = `Student's Name: ${name}`;
+    studentAge.innerText = `Student's Age: ${age}`;    
+    studentRoll.innerText = `Student's Roll Number: ${roll}`;
 
     // append the create data to student div
     studentDiv.append(studentName, studentAge, studentRoll);
